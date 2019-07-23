@@ -22,6 +22,7 @@ namespace aspNetCorePlatzi.Controllers
         private EscuelaContext _context;
 
         public EscuelaController(EscuelaContext context) {
+
             _context = context;
         }
     }
