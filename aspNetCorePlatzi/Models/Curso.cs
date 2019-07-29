@@ -11,5 +11,7 @@ namespace aspNetCorePlatzi.Models
 
         public string Dirección { get; set; }
 
+        public string escuelaId { get; set; }
+        public Escuela escuela { get; set; }
     }
 }

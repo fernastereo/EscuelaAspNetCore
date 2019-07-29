@@ -4,7 +4,10 @@ namespace aspNetCorePlatzi.Models
 {
     public class Evaluación:ObjetoEscuelaBase
     {
+        public string alumnoId { get; set; }
         public Alumno Alumno { get; set; }
+
+        public string asignaturaId { get; set; }
         public Asignatura Asignatura  { get; set; }
 
         public float Nota { get; set; }
