@@ -7,7 +7,7 @@ using aspNetCorePlatzi.Models;
 
 namespace aspNetCorePlatzi.Controllers
 {
-    public class AlumnoController : Controller
+    public class CursoController : Controller
     {
         //[Route("asignatura/index")]
         //[Route("asignatura/index/{asignaturaid}")]
@@ -16,28 +16,28 @@ namespace aspNetCorePlatzi.Controllers
 
             if (!string.IsNullOrWhiteSpace(id))
             {
-                var alumno = from alumn in _context.Alumnos
-                                 where alumn.Id == id
-                                 select alumn;
+                var curso = from cur in _context.Cursos
+                                 where cur.Id == id
+                                 select cur;
 
-                return View(alumno.SingleOrDefault());
+                return View(curso.SingleOrDefault());
             } else
             {
-                return View("multialumno", _context.Alumnos);
+                return View("multicurso", _context.Cursos);
             }
         }
-        public IActionResult multiAlumno()
+        public IActionResult multiCurso()
         {
             ViewBag.Cosadinamica = "Cualquier vaina que quiere enviar a la vista";
             ViewBag.Fecha = DateTime.Now;
 
-            return View(_context.Alumnos);
+            return View(_context.Cursos);
         }
 
 
         private EscuelaContext _context;
 
-        public AlumnoController(EscuelaContext context) {
+        public CursoController(EscuelaContext context) {
             _context = context;
         }
     }
