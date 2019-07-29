@@ -49,7 +49,7 @@ namespace aspNetCorePlatzi.Models {
             foreach (var curso in Cursos)
             {
                 var tmpList = new List<Asignatura>() {
-                    new Asignatura { Id= Guid.NewGuid().ToString(), Nombre = "Matemáticas", cursoId = curso.Id},
+                    new Asignatura { Id = Guid.NewGuid().ToString(), Nombre = "Matemáticas", cursoId = curso.Id},
                     new Asignatura { Id = Guid.NewGuid().ToString(), Nombre = "Educación Física", cursoId = curso.Id },
                     new Asignatura { Id = Guid.NewGuid().ToString(), Nombre = "Castellano", cursoId = curso.Id },
                     new Asignatura { Id = Guid.NewGuid().ToString(), Nombre = "Ciencias Naturales", cursoId = curso.Id },
@@ -67,31 +67,36 @@ namespace aspNetCorePlatzi.Models {
                     Id = Guid.NewGuid().ToString(),
                     escuelaId = escuela.Id,
                     Nombre = "Curso 101",
-                    Jornada = TiposJornada.Mañana
+                    Jornada = TiposJornada.Mañana,
+                    Dirección = "aaabbbcccddd"
                 },
                 new Curso() {
                     Id = Guid.NewGuid().ToString(),
                     escuelaId = escuela.Id,
                     Nombre = "Curso 201",
-                    Jornada = TiposJornada.Tarde
+                    Jornada = TiposJornada.Tarde,
+                    Dirección = "aaabbbcccddd"
                 },
                 new Curso() {
                     Id = Guid.NewGuid().ToString(),
                     escuelaId = escuela.Id,
                     Nombre = "Curso 301",
-                    Jornada = TiposJornada.Noche
+                    Jornada = TiposJornada.Noche,
+                    Dirección = "aaabbbcccddd"
                 },
                 new Curso() {
                     Id = Guid.NewGuid().ToString(),
                     escuelaId = escuela.Id,
                     Nombre = "Curso 401",
-                    Jornada = TiposJornada.Mañana
+                    Jornada = TiposJornada.Mañana,
+                    Dirección = "aaabbbcccddd"
                 },
                 new Curso() {
                     Id = Guid.NewGuid().ToString(),
                     escuelaId = escuela.Id,
                     Nombre = "Curso 501",
-                    Jornada = TiposJornada.Tarde
+                    Jornada = TiposJornada.Tarde,
+                    Dirección = "aaabbbcccddd"
                 },
             };
         }
