@@ -9,10 +9,9 @@ namespace aspNetCorePlatzi.Controllers
 {
     public class EscuelaController : Controller
     {
-
         public IActionResult Index()
         {
-            ViewBag.Cosadinamica = "Cualquier vaina que quiere enviar a la vista";
+            ViewBag.Cosadinamica = "Cualquier vaina que se quiera enviar a la vista";
 
             var escuela =_context.Escuelas.FirstOrDefault();
 

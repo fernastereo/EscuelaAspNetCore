@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using aspNetCorePlatzi.Models;
 
 namespace aspNetCorePlatzi.Controllers {
+
     public class HomeController : Controller {
         public IActionResult Index() {
             return View();

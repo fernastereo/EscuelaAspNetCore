@@ -18,13 +18,14 @@ namespace aspNetCorePlatzi.Models {
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder) {
+
             base.OnModelCreating(modelBuilder);
 
             var escuela = new Escuela();
             escuela.AñoDeCreación = 2001;
             escuela.Id = Guid.NewGuid().ToString();
-            escuela.Nombre = "Ferna School S.A.";
-            escuela.Ciudad = "Vancouver";
+            escuela.Nombre = "Ferna School S.A.S.";
+            escuela.Ciudad = "Toronto";
             escuela.Pais = "Canadá";
             escuela.Dirección = "689 Old Weston Rd.";
             escuela.TipoEscuela = TiposEscuela.PreEscolar;
@@ -32,7 +33,7 @@ namespace aspNetCorePlatzi.Models {
             modelBuilder.Entity<Escuela>().HasData(escuela);
 
             modelBuilder.Entity<Asignatura>().HasData(
-                new Asignatura{Id=Guid.NewGuid().ToString(), Nombre="Matemáticas"} ,
+                new Asignatura{Id=Guid.NewGuid().ToString(), Nombre="Matemáticas"},
                 new Asignatura{Id=Guid.NewGuid().ToString(), Nombre="Educación Física"},
                 new Asignatura{Id=Guid.NewGuid().ToString(), Nombre="Castellano"},
                 new Asignatura{Id=Guid.NewGuid().ToString(), Nombre="Ciencias Naturales"}
@@ -50,7 +51,7 @@ namespace aspNetCorePlatzi.Models {
             var listaAlumnos = from n1 in nombre1
                                from n2 in nombre2
                                from a1 in apellido1
-                               select new Alumno { Nombre = $"{n1} {n2} {a1}" };
+                               select new Alumno {Id = Guid.NewGuid().ToString(), Nombre = $"{n1} {n2} {a1}" };
 
             return listaAlumnos.OrderBy((al) => al.Id).Take(cantidad).ToList();
         }

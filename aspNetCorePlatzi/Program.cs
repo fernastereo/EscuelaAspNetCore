@@ -16,6 +16,7 @@ namespace aspNetCorePlatzi {
             //CreateWebHostBuilder(args).Build().Run();
 
             var host = CreateWebHostBuilder(args).Build();
+
             using (var scope = host.Services.CreateScope())
             {
                 var services = scope.ServiceProvider;
@@ -30,7 +31,7 @@ namespace aspNetCorePlatzi {
                     logger.LogError(ex, "An error ocurred creating the DB");
                 }
 
-            }
+            }//Using se asegura que cuando termine el bloque de codigo el objeto muera
 
             host.Run();
         }
