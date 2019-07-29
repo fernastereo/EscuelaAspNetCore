@@ -1,4 +1,5 @@
 ﻿@model  Curso
+
 @{
     ViewData["Title"] = "Creacion de Curso";
     Layout = "_OtraPlantilla";
@@ -6,6 +7,21 @@
 
 <h1>@ViewData["Title"]</h1>
 
+<form method="POST" >
+    <div>
+        <label asp-for="Nombre"></label>
+        <input asp-for="Nombre" type="text" value="" />
+    </div>
+    <div>
+        <label asp-for="Dirección"></label>
+        <input asp-for="Dirección" type="text" value="" />
+    </div>
+    <div>
+        <label asp-for="Jornada"></label>
+        <input asp-for="Jornada" type="text" value="" />
+    </div>
+    <input type="submit" name="name" value="Guardar" />
+</form>
 
 <p><i>@ViewBag.Fecha</i></p>
 <p><i>@ViewData["Fecha"]</i></p>
